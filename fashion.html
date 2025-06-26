@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Fashion World</title>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                margin: 0;
+                background-color: #fffafc;
+            }
+            h1,h2,h3{
+                color: #b30059;
+            }
+            form{
+                background-color: #ffe6f0;
+                padding: 20px;
+                width: 300px;
+                margin: 50px auto;
+                border-radius: 10px;
+                box-shadow: 0 0 10px #ccc;
+            }
+            label{
+                display: block;
+                margin-bottom: 10px;
+            }
+            input[type="text"],
+            input[type="password"]{
+                width: 100px;
+                padding: 8px;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+            button{
+                background-color: #b30059;
+                color: white;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                width: 100%;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: #800040;
+            }
+            #mainContent{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 20px;
+            }
+            aside{
+                flex: 1;
+                min-width: 200px;
+                max-width: 250px;
+                background-color: #fff0f5;
+                padding: 15px;
+                border-right: 2px solid #ddd;
+            }
+            aside input{
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+            }
+            aside ul{
+                list-style: none;
+                padding: 0;
+            }
+            aside li{
+                margin: 8px 0;
+                font-weight: bold;
+                color: #800040;
+            }
+            .main-section{
+                flex: 3;
+                padding: 20px;
+            }
+            .main-section img{
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+            footer{
+                text-align: center;
+                background-color: #f9e6f2;
+                padding: 20px;
+                margin-top: 30px;
+                border-top: 1px solid #ccc;
+            }
+            a{
+                color: #800040;
+                text-decoration: none;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+            @media screen and (max-width: 768px){
+                #mainContent {
+                    flex-direction: column;
+                }
+                aside{
+                    border-right: none;
+                    border-bottom: 2px solid #ddd;
+                    margin-bottom: 20px;
+                }
+            }
+        </style>
+        <script>
+            function showLogin(){
+                document.getElementbyId("SignupForm").style.display= "none";
+                document.getElementById("loginForm").style.display="block";
+                return false;
+            }
+            function showSignup(){
+                document.getElementById("signupForm").style.display="block";
+                document.getElementById("loginForm").style.display="none";
+            }
+            function loginUser(event){
+                event.preventDefault();
+                alert("Logged in! (Just a mockup)");
+                document.getElementbyId("mainContent").style.display="flex";
+                document.getElementById("loginForm").style.display="none";
+            }
+        </script>
+    </head>
+    <body>
+        
+        <div id="mainContent" style="display:flex;">
+            <aside>
+                <h3>Search Clothing</h3>
+                <input type="text" placeholder="Search here....">
+                <ul>
+                    <li> Dresses</li>
+                    <li>Tops</li>
+                    <li>Jeans</li>
+                    <li>shoes</li>
+                </ul>
+            </aside>
+            <div class="main-section">
+                <h1> Welcome to Fashion World </h1>
+                <p>Explore our latest Fashiontrends and styles below</p>
+                <img src="images/lady.jpg" alt="Fashion Image 1">
+                <img src="images/c57265b19a72471dc94f59c497e91f5a - Copy.jpg" alt="FashionImage2">
+            </div>
+        </div>
+        <footer>
+            <h4> Contact Us</h4>
+            <p> Email:loilordjnr123@gmail.com</p>
+            <p> Phone:0256349627</p>
+            <p> Location:Accra, Ghana</p>
+        </footer>
+    </body>
+</html>
